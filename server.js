@@ -5,9 +5,10 @@ var app = express();
 //set port
 app.set('port', (process.env.PORT || 5000));
 //use static files
-app.use('/css', express.static(__dirname + 'assets/css'));
-app.use('/js', express.static(__dirname + 'assets/js'));
-app.use('/fonts', express.static(__dirname + 'assets/fonts'));
+app.use('/css', express.static(__dirname + '/assets/css'));
+app.use('/js', express.static(__dirname + '/assets/js'));
+app.use('/fonts', express.static(__dirname + '/assets/fonts'));
+app.use('/images', express.static(__dirname + '/images'));
 app.use('/public', express.static(__dirname + '/'));
 //express routes
 app.get('/', function(req, res){
